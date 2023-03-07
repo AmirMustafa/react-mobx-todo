@@ -19,25 +19,24 @@ class UserStore {
     }
 
     get totalSubject() {
+        console.log(`getter`);
         return this.userInfo.subject.length;
     }
 
     logUserDetails = () => {
-        console.log(`Subject length: ${this.totalSubject()}`);
+        console.log(`Subject length: ${this.totalSubject}`);
     }
 
     updateUser = (name) => {
-        return 'NA';
+        this.userInfo.name = name;
     }
 
     addSubject = (data) => {
         return 'NA';
     }
 
-
-
     prefetchData = () => {
-        console.log('printing prefetchData...');
+        console.log('run in action...');
     }
 }
 export default UserStore;
