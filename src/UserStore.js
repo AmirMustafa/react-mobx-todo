@@ -2,8 +2,8 @@ import { action, computed, makeObservable, observable, autorun, runInAction } fr
 
 class UserStore {
     userInfo = {
-        id: 'C117',
-        name: 'code',
+        id: '113',
+        name: 'Happy Learnings',
         subject: ['English', 'CS', 'Maths']
     }
 

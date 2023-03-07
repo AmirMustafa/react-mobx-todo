@@ -4,7 +4,7 @@ import UserStore from './UserStore';
 
 
 function App() {
-  const store = UserStore();
+  const store = new UserStore();
   return (
     <Home store={store} />
   );
