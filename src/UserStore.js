@@ -32,7 +32,7 @@ class UserStore {
     }
 
     addSubject = (data) => {
-        return 'NA';
+        this.userInfo.subject.push(data);
     }
 
     prefetchData = () => {
