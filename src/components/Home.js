@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite"
 function Home({ store }) {
     const changeUser = () => {
         store.updateUser("New data");
-    }
+    }   
 
     const addSubject = () => {
         store.addSubject('Aeronotics');

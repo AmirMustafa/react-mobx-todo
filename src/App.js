@@ -1,16 +1,13 @@
 import './App.css';
-import Home from './components/Home';
-import About from './components/About';
-import UserStore from './UserStore';
+import Home from './mst/Home';
 
 
 function App() {
-  const store = new UserStore();
   return (
-    <>
-      <Home store={store} />
-      <About store={store} />
-    </>
+    <div className='App'>
+      <h1>MobX State Tree (MST)</h1>
+      <Home />
+    </div>
   );
 }
 
