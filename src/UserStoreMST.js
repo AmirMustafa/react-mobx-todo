@@ -18,6 +18,7 @@ const UserModel = types
             }
         }))
 
+// Default initial value
 const users = UserModel.create({
     userId: '007',
     userName: 'Happy Learnings',
