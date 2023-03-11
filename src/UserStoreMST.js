@@ -22,8 +22,8 @@ const UserModel = types
 const users = UserModel.create({
     userId: '007',
     userName: 'Happy Learnings',
-    math: 100,
-    hindi: 50
+    math: 90,
+    hindi: 80
 });
 
 export default users;
