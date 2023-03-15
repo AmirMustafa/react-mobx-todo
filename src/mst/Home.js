@@ -10,6 +10,10 @@ function Home() {
     const updateHindiMarks = () => {
         store.setHindi(99);
     };
+
+    const newMathMarks = () => {
+        store.getMathMarks();
+    };
     return (
         <div>
             <h1>{store.userName} - {store.userId}</h1>
@@ -18,7 +22,8 @@ function Home() {
             <h2>Total marks: {store.totalMarks}</h2>
             <h2>Percetage: {store.percentage}</h2>
             <button onClick={updateMathMarks}>Update Math</button> &emsp;
-            <button onClick={updateHindiMarks}>Update Hindi</button>
+            <button onClick={updateHindiMarks}>Update Hindi</button> &emsp;
+            <button onClick={newMathMarks}>Call API</button>
         </div>
     );
 }

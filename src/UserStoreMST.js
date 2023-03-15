@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { types,onSnapshot, flow, applySnapshot, getSnapshot } from 'mobx-state-tree';
 
 const UserModel = types
@@ -14,7 +15,12 @@ const UserModel = types
             setHindi(val) {
                 self.hindi = +val;
             },
+            getMathMarks: flow(function* getMathMarks () {
+                const response = yield axios.get('https://jsonplaceholder.typicode.com/todos/3');
+                console.log('response ===> ', response);
+            }),
             afterCreate() {
+                console.log('i am called');
                 onSnapshot(self, (snapshot) => console.log('onSnapshot called ===> ', snapshot));
             }
         }))
