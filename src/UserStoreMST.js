@@ -47,4 +47,6 @@ const users = UserModel.create({
     hindi: 80
 });
 
+console.log('getSnapshot users ===> ', users);
+
 export default users;
