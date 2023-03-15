@@ -17,7 +17,13 @@ const UserModel = types
             },
             getMathMarks: flow(function* getMathMarks () {
                 const response = yield axios.get('https://jsonplaceholder.typicode.com/todos/3');
-                console.log('response ===> ', response);
+                if(response?.data) {
+                    const marks = response.data.id; // Assume this is marks data from API
+                    applySnapshot(self, {
+                        ...self,
+                        math: marks
+                    });
+                } 
             }),
             afterCreate() {
                 console.log('i am called');
