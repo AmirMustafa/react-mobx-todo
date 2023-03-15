@@ -10,6 +10,12 @@ const UserModel = types
         .actions((self) => ({
             setMath(val) {
                 self.math = +val;
+            },
+            setHindi(val) {
+                self.hindi = +val;
+            },
+            afterCreate() {
+                onSnapshot(self, (snapshot) => console.log('onSnapshot called ===> ', snapshot));
             }
         }))
         .views((self) => ({
