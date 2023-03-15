@@ -12,6 +12,7 @@ function Home() {
             <h2>Math marks: {store.math}</h2>
             <h2>Hindi marks: {store.hindi}</h2>
             <h2>Total marks: {store.totalMarks}</h2>
+            <h2>Percetage: {store.percentage}</h2>
             <button onClick={updateMathMarks}>Update Math</button>
         </div>
     );

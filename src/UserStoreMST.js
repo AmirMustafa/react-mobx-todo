@@ -15,6 +15,9 @@ const UserModel = types
         .views((self) => ({
             get totalMarks() {
                 return self.hindi + self.math;
+            },
+            get percentage() {
+                return `${((self.hindi + self.math)/200) * 100}%`
             }
         }))
 
